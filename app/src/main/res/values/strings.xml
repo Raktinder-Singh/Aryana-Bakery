@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Aryana</string>
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="order">Order</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search items</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Splash Activity-->
+    <string name="enjoy">Enjoy your sweet moments</string>
+    <string name="by">By \nCT University</string>
+    <string name="cafe_n_aryana">Cafe \nAryana</string>
+
+    <!--Login Activity-->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="no_account">Don\'t have an account? Create Account</string>
+    <string name="heading">Login into your account</string>
+
+
+    <!--Signup Activity-->
+    <string name="heading_sign">Create a new account</string>
+    <string name="name">Name</string>
+    <string name="confirm">Confirm Password?</string>
+    <string name="signup">Signup</string>
+    <string name="have_account">Already have an account? Login</string>
+
+
+    <string name="notifications">Notifications</string>
+    <string name="category">Category</string>
+    <string name="favourite">Favourites</string>
+    <string name="bakery">Bakery</string>
+    <string name="cake">Cake</string>
+    <string name="italian">Italian</string>
+    <string name="shakes">Shakes</string>
+    <string name="mrp">MRP Items</string>
+    <string name="all">All</string>
+    <string name="Null">null</string>
+    <string name="donutbox">Box of mixed Donuts</string>
+    <string name="chocodonut">Chocolate Donut</string>
+    <string name="mostpopular">Most Popular</string>
+    <string name="spongydonut">Spongy Donut</string>
+    <string name="donutDescp">With chocolate layer</string>
+    <string name="donutRate">Rs. 30</string>
+
+    <string name="cupcake">Chocolate cupcake</string>
+    <string name="cupcakeDescp">with cream</string>
+    <string name="cupcakeRate">Rs. 40</string>
+
+    <string name="coffee">American coffee</string>
+    <string name="coffeeDescp">Strong</string>
+    <string name="coffeeRate">Rs. 40</string>
+
+    <string name="chocolatecake">Chocolate cake</string>
+    <string name="chocolatecakeDescp">with cream</string>
+    <string name="chocolatecakeRate">Rs. 40</string>
+
+    <string name="brownie">Brownie</string>
+    <string name="brownieDescp">with dry fruit touch</string>
+    <string name="brownieRate">Rs. 40</string>
+
+    <string name="rumballs">Chocolate cupcake</string>
+    <string name="rumballsDescp">Fully filled with chocolate</string>
+    <string name="rumballsRate">Rs. 40</string>
+
+    <!--Cart Activity -->
+    <string name="cart_head">Cart</string>
+    <string name="minus">Decrease</string>
+    <string name="plus">Increase</string>
+    <string name="bin">Remove</string>
+    <string name="delivery">Delivery</string>
+    <string name="pick">Pick up</string>
+    <string name="continue_button">Continue to Checkout | </string>
+
+    <!--Profile Activity-->
+    <string name="dietry">Dietary preferences</string>
+    <string name="coupons">Coupons and Promotions</string>
+    <string name="help">Help</string>
+    <string name="privacy">Privacy</string>
+    <string name="about">About</string>
+    <string name="sign_out">Sign out</string>
+</resources>

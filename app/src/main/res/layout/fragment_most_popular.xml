@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:cardCornerRadius="10dp">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:iss_auto_cycle="true"
+                    app:iss_no_dots="true"
+                    app:iss_period="1000"
+                    app:iss_delay="1000"
+                    app:iss_text_align="CENTER"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/mostpopular"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:rowCount="3">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/donut"
+                            android:layout_width="135dp"
+                            android:layout_height="117.33dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="@string/chocodonut"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/doonut"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/heart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/favo"
+                            app:layout_constraintEnd_toEndOf="@+id/donut"
+                            app:layout_constraintTop_toTopOf="@+id/donut" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/cart2"
+                            app:layout_constraintBottom_toBottomOf="@+id/donut"
+                            app:layout_constraintEnd_toEndOf="@+id/donut"
+                            app:layout_constraintTop_toBottomOf="@+id/heart"
+                            app:layout_constraintVertical_bias="0.865" />
+
+                        <TextView
+                            android:id="@+id/itemName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/spongydonut"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/donut" />
+
+
+                        <TextView
+                            android:id="@+id/smlDes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/donutDescp"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/stars"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/smlDes" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/donutRate"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toBottomOf="@+id/smlDes"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/cupcake"
+                            android:layout_width="135dp"
+                            android:layout_height="117.33dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/minicupcake"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/heart2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/favo"
+                            app:layout_constraintEnd_toEndOf="@+id/cupcake"
+                            app:layout_constraintTop_toTopOf="@+id/cupcake" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/cart2"
+                            app:layout_constraintBottom_toBottomOf="@+id/cupcake"
+                            app:layout_constraintEnd_toEndOf="@+id/cupcake"
+                            app:layout_constraintTop_toBottomOf="@+id/heart2"
+                            app:layout_constraintVertical_bias="0.865" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/cupcake"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cupcake" />
+
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/cupcakeDescp"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                        <ImageView
+                            android:id="@+id/star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/stars"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/cupcakeRate"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/star"
+                            app:layout_constraintStart_toEndOf="@+id/star"
+                            app:layout_constraintTop_toBottomOf="@+id/textView10"
+                            app:layout_constraintVertical_bias="1.0" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/coffee"
+                            android:layout_width="135dp"
+                            android:layout_height="117.33dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="@string/Null"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/coffee"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/heart3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/favo"
+                            app:layout_constraintEnd_toEndOf="@+id/coffee"
+                            app:layout_constraintTop_toTopOf="@+id/coffee" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/cart2"
+                            app:layout_constraintBottom_toBottomOf="@+id/coffee"
+                            app:layout_constraintEnd_toEndOf="@+id/coffee"
+                            app:layout_constraintTop_toBottomOf="@+id/heart3"
+                            app:layout_constraintVertical_bias="0.865" />
+
+                        <TextView
+                            android:id="@+id/card3textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/coffee"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/coffee" />
+
+
+                        <TextView
+                            android:id="@+id/card3textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/coffeeDescp"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card3textView" />
+
+                        <ImageView
+                            android:id="@+id/card3imageView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/stars"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card3textView10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/coffeeRate"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/card3imageView4"
+                            app:layout_constraintStart_toEndOf="@+id/card3imageView4"
+                            app:layout_constraintTop_toBottomOf="@+id/card3textView10"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/chococake"
+                            android:layout_width="135dp"
+                            android:layout_height="117.33dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="@string/Null"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/chococake"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/card4heart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/favo"
+                            app:layout_constraintEnd_toEndOf="@+id/chococake"
+                            app:layout_constraintTop_toTopOf="@+id/chococake" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/cart2"
+                            app:layout_constraintBottom_toBottomOf="@+id/chococake"
+                            app:layout_constraintEnd_toEndOf="@+id/chococake"
+                            app:layout_constraintTop_toBottomOf="@+id/card4heart"
+                            app:layout_constraintVertical_bias="0.865" />
+
+                        <TextView
+                            android:id="@+id/card4textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/chocolatecake"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/chococake" />
+
+
+                        <TextView
+                            android:id="@+id/card4textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/chocolatecakeDescp"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card4textView" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCard4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/stars"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card4textView10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/chocolatecakeRate"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageViewCard4"
+                            app:layout_constraintStart_toEndOf="@+id/imageViewCard4"
+                            app:layout_constraintTop_toBottomOf="@+id/card4textView10"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/brownie"
+                            android:layout_width="135dp"
+                            android:layout_height="117.33dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="@string/Null"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/brownie"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/card5heart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/favo"
+                            app:layout_constraintEnd_toEndOf="@+id/brownie"
+                            app:layout_constraintTop_toTopOf="@+id/brownie" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/cart2"
+                            app:layout_constraintBottom_toBottomOf="@+id/brownie"
+                            app:layout_constraintEnd_toEndOf="@+id/brownie"
+                            app:layout_constraintTop_toBottomOf="@+id/card5heart"
+                            app:layout_constraintVertical_bias="0.865" />
+
+                        <TextView
+                            android:id="@+id/card5textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/brownie"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/brownie" />
+
+
+                        <TextView
+                            android:id="@+id/card5textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/brownieDescp"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card5textView" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCard5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/stars"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card5textView10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/brownieRate"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageViewCard5"
+                            app:layout_constraintStart_toEndOf="@+id/imageViewCard5"
+                            app:layout_constraintTop_toBottomOf="@+id/card5textView10"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/rumballs"
+                            android:layout_width="135dp"
+                            android:layout_height="117.33dp"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="@string/Null"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rumballs"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/card6heart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/favo"
+                            app:layout_constraintEnd_toEndOf="@+id/rumballs"
+                            app:layout_constraintTop_toTopOf="@+id/rumballs" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/cart2"
+                            app:layout_constraintBottom_toBottomOf="@+id/rumballs"
+                            app:layout_constraintEnd_toEndOf="@+id/rumballs"
+                            app:layout_constraintTop_toBottomOf="@+id/card6heart"
+                            app:layout_constraintVertical_bias="0.865" />
+
+                        <TextView
+                            android:id="@+id/card6textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/rumballs"
+                            android:textColor="@color/text"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/rumballs" />
+
+
+                        <TextView
+                            android:id="@+id/card6textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="@string/rumballsDescp"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card6textView" />
+
+                        <ImageView
+                            android:id="@+id/imageViewCard6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/Null"
+                            android:src="@drawable/stars"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/card6textView10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="@string/rumballsRate"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageViewCard6"
+                            app:layout_constraintStart_toEndOf="@+id/imageViewCard6"
+                            app:layout_constraintTop_toBottomOf="@+id/card6textView10"
+                            app:layout_constraintVertical_bias="1.0" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

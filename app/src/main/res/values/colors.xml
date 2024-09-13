@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="back">#FFF6EE</color>
+    <color name="text">#704A24</color>
+    <color name="button">#FFBE7E</color>
+    <color name="buttontext">#5E3104</color>
+    <color name="opbutton">#FDDBB8</color>
+    <color name="gray">#ADAAA8</color>
+    <color name="icon_color">#996531</color>
+    <color name="bottomnav">#FDDBB8</color>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "445306323395",
+    "project_id": "aryana-9d293",
+    "storage_bucket": "aryana-9d293.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445306323395:android:62731d72bb046895657d76",
+        "android_client_info": {
+          "package_name": "com.example.aryana"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtn0Kf_gK6qN8lO-XPCs3a_f5LyL4HGVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
