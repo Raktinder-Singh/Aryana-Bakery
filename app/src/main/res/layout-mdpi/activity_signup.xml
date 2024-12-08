@@ -11,12 +11,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="105dp"
         android:fontFamily="@font/ac_lo_nica_regular"
-        android:text="@string/cafe_n_aryana"
+        android:text="Cafe \nAryana"
         android:textAlignment="center"
         android:textColor="@color/text"
-        android:textSize="34sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,98 +25,88 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/heading_sign"
-        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:text="Create a new account"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/customedittext"
-        android:drawableLeft="@drawable/user"
-        android:drawablePadding="15dp"
-        android:ems="10"
-        android:hint="@string/name"
-        android:inputType="text"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/customedittext"
-        android:drawableLeft="@drawable/baseline_email_24"
-        android:drawablePadding="15dp"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/email">
 
-    <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/customedittext"
-        android:drawableLeft="@drawable/baseline_lock_24"
-        android:drawablePadding="15dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customedittext"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:inputType="text"
+                android:maxLength="40"
+                android:singleLine="true" />
 
-    <EditText
-        android:id="@+id/editTextTextPassword3"
-        android:layout_width="320dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/customedittext"
-        android:drawableLeft="@drawable/confirm"
-        android:drawablePadding="15dp"
-        android:ems="10"
-        android:hint="@string/confirm"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/password"
+            app:boxStrokeColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customedittext"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:inputType="textPassword"
+                android:maxLength="40"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signup"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/custombutton"
         android:fontFamily="@font/ac_lo_nica_regular"
-        android:text="@string/signup"
+        android:text="Signup"
         android:textAllCaps="false"
         android:textColor="@color/buttontext"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/haveaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/have_account"
+        android:text="Already have an account? Login"
         android:textColor="@color/buttontext"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/signup"

@@ -84,18 +84,18 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/userDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="oliviaanderson@example.com"
-                        app:layout_constraintEnd_toEndOf="@+id/textView13"
+                        app:layout_constraintEnd_toEndOf="@+id/userName"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView13"
-                        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                        app:layout_constraintStart_toStartOf="@+id/userName"
+                        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/userName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"

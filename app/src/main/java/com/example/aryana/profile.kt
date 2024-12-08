@@ -5,13 +5,25 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.aryana.databinding.ActivityProfileBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class profile : AppCompatActivity() {
 
     private lateinit var binding: ActivityProfileBinding
+
+    companion object{
+        val auth: FirebaseAuth by lazy { FirebaseAuth.getInstance() }
+
+    }
+
+
     private lateinit var bottomNavigationView: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -19,14 +31,15 @@ class profile : AppCompatActivity() {
         bottomNavigationView.selectedItemId = R.id.profile_bottom
 
 
-        bottomNavigationView.setOnItemSelectedListener{
-                menuItem ->
-            when(menuItem.itemId){
-                R.id.home_bottom ->  {
+
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.home_bottom -> {
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     true
                 }
+
                 R.id.cart_bottom -> {
                     val intent = Intent(this, Cart::class.java)
                     startActivity(intent)
@@ -38,8 +51,19 @@ class profile : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
                 R.id.profile_bottom -> true
                 else -> false
             }
         }
-}}
+    }
+    override fun onResume() {
+        super.onResume()
+        binding.userDetails.text = updateData()
+    }
+
+    private fun updateData(): String{
+
+        return "${auth.currentUser?.email}"
+    }
+}

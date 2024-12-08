@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "445306323395",
-    "project_id": "aryana-9d293",
-    "storage_bucket": "aryana-9d293.appspot.com"
+    "project_number": "645712542523",
+    "project_id": "aryana-bakery",
+    "storage_bucket": "aryana-bakery.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:445306323395:android:62731d72bb046895657d76",
+        "mobilesdk_app_id": "1:645712542523:android:255f42e70fe54130d4d51e",
         "android_client_info": {
           "package_name": "com.example.aryana"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCtn0Kf_gK6qN8lO-XPCs3a_f5LyL4HGVc"
+          "current_key": "AIzaSyC0DixtgofxtvkEJP8u6qbVinaLybBFfyM"
         }
       ],
       "services": {
